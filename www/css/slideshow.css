@@ -1,0 +1,38 @@
+﻿#slider {
+    margin: 0 auto;
+    /* padding: 20px; */
+    width: 95%;
+    max-width: 1500px; /* 最大幅 */
+    min-width: 300px; /* 最小幅 */
+	max-height: 800px;
+    color: #419be0;
+    background: #333;
+    text-align: center;
+}
+/*左右の矢印の色・大きさを変える*/
+.slick-prev:before,
+.slick-next:before {
+    color: #000;
+    font-size: 50px;
+    
+}
+/*左右の矢印の位置を変える*/
+.slick-next {
+    right: 35px;
+    z-index: 99;
+}
+.slick-prev {
+     left: 10px;
+    z-index: 98;
+}
+/*スライド数のドットの色を変える*/
+.slick-dots li.slick-active button:before,
+.slick-dots li button:before {
+    color: #fff;
+}
+/*スライド画像の横幅可変*/
+#slider img {
+    width: 100vw;
+    /* height: 90vh; */
+	height: 85vh;
+}

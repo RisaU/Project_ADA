@@ -1,0 +1,170 @@
+﻿* {
+margin: 0em;
+padding: 0em;
+font-size: 100%;
+border-style: none;
+list-style-type: none;
+}
+/* Common settings */
+body {
+    /* border: solid 1px #000; */
+    /* width: 1000px; */
+    width: 100%;
+    height: 100%; /* auto or  1000px */
+    margin: 0 auto;
+    /* font-family: "trebuchet MS", calibri, sans-serif; */
+	font-family: "Lucida Console", Monaco, monospace;
+    font-size: 16px;
+}
+/* Header settings */
+header {
+    /* border: solid 1px #f00; */
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* 上下中央揃え */
+    background-color: #fff;
+    z-index: 100;
+}
+header a {
+	margin-left: 10px;
+}
+header a  {
+    width: 160px;
+    heght: 92px;
+}
+/* Navigation */
+nav {
+    /* border: solid 1px #f00; @debug */
+    width: 100%;
+    height: 100%;
+    margin-right: 80px;
+}
+nav ul {
+    height: 100%;
+    display: flex;
+    /* justify-content: space-around; */
+    justify-content: flex-end;
+    align-items: center; /* 上下中央揃え(only for Nav) */
+
+}
+nav li {
+    /* border: solid 1px #00f;  @debug */
+    width: 150px;
+    height: 100%;
+    text-align: center;/* 左右中央 */
+}
+nav a {
+    width: 150px;
+    height: 24px;
+    display: block;/* リンクをボタン化 */
+    padding: 38px 0;/* リンクをボタン化 */
+    color: black;
+    font: "Trebuchet MS", Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+}
+/* 選択されてる画面のナビの背景色変更 */
+nav #active {
+    background-color: #ddd;
+}
+/*
+nav a:hover {
+    background: #ccc;
+}
+*/
+/* Contents settings */
+
+main {
+	background: url("./../images/bg.png") no-repeat center top;
+	background-attachment: fixed;/* for parallax */
+	
+}
+#mainContent {	/* slide show */
+	margin-bottom: 50px;parallax
+}
+.mainArticle {
+	/* border: solid 1px black; @debug */
+	display: flex;
+	height: 700px;
+	margin: 10px;
+}
+.mainArticle  img {
+	/* border: solid 1px red; @debug */
+	width: 50%;
+}
+.mainArticle  ul {
+	/* border: solid 1px red; @debug */
+	width: 250%;
+}
+.mainArticle  li {
+
+}
+.mainArticle  h1, .mainArticle h2 {
+	font-size: 300%;
+	font-family: "Courier New", Courier, monospace;
+	color: #c7c75a;
+	/* text-shadow: 3px 3px 3px #000; */
+	margin: 30px 30px 10px 30px;
+}
+.mainArticle  p {
+	font-size: 130%;
+	color: #777676;
+	margin: 0 30px;
+	margin-bottom; 20px;
+	line-height: 150%;/* 行の高さを指定 */
+}
+#achievementsButton {
+	text-align: center;
+	align-items: center;
+}
+/* Footer settings */
+footer {/* @memo フレックスデザイン未対応 */
+    border-top: solid 2px #000;
+	margin-top: 10px;
+    width: 100%;
+    height: 22px;
+
+}
+footer  ul{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 200px;
+    align-items: center; /* only for icon */
+}
+
+footer a {
+    font-size: 11px;
+    color: #000;
+    text-decoration: none;
+}
+
+
+@media (max-width: 850px) { 
+  header { 
+  /*
+    flex-direction: column;
+    align-items: center;
+*/
+  }
+  nav {
+    display:none;/* show only ham-menu */
+  }
+  main {
+    width: 100%;
+  }
+  .mainArticle {
+	  display: inline;
+  }
+  .mainArticle  img {
+	  width: 100%;
+  }
+  .mainArticle  ul {
+	/* border: solid 1px red; @debug */
+	width: 100%;
+	text-align: center;
+  }
+} 
