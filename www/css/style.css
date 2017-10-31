@@ -10,7 +10,7 @@ body {
     /* border: solid 1px #000; */
     /* width: 1000px; */
     width: 100%;
-    height: 100%; /* auto or  1000px */
+    height: 100%;
     margin: 0 auto;
     /* font-family: "trebuchet MS", calibri, sans-serif; */
 	font-family: "Lucida Console", Monaco, monospace;
@@ -20,6 +20,7 @@ body {
 header {
     /* border: solid 1px #f00; */
     position: fixed;
+	top: 0;
     width: 100%;
     height: 100px;
     display: flex;
@@ -33,16 +34,16 @@ header a {
 }
 header a  {
     width: 160px;
-    heght: 92px;
+    height: 92px;
 }
 /* Navigation */
-nav {
+#headerNav {
     /* border: solid 1px #f00; @debug */
     width: 100%;
     height: 100%;
     margin-right: 80px;
 }
-nav ul {
+#headerNav ul {
     height: 100%;
     display: flex;
     /* justify-content: space-around; */
@@ -50,13 +51,13 @@ nav ul {
     align-items: center; /* 上下中央揃え(only for Nav) */
 
 }
-nav li {
+#headerNav li {
     /* border: solid 1px #00f;  @debug */
     width: 150px;
     height: 100%;
     text-align: center;/* 左右中央 */
 }
-nav a {
+#headerNav a {
     width: 150px;
     height: 24px;
     display: block;/* リンクをボタン化 */
@@ -68,7 +69,7 @@ nav a {
     text-decoration: none;
 }
 /* 選択されてる画面のナビの背景色変更 */
-nav #active {
+#headerNav #active {
     background-color: #ddd;
 }
 /*
@@ -81,11 +82,15 @@ nav a:hover {
 main {
 	background: url("./../images/bg.png") no-repeat center top;
 	background-attachment: fixed;/* for parallax */
-	
+	height:100%;
+	position: relative;
+	top: 100px;
+	padding-bottom: 50px;/* 最下部にフッターを固定表示 */
 }
-#mainContent {	/* slide show */
-	margin-bottom: 50px;parallax
+#slideShow {	/* slide show */
+	margin-bottom: 50px;
 }
+
 .mainArticle {
 	/* border: solid 1px black; @debug */
 	display: flex;
@@ -103,18 +108,18 @@ main {
 .mainArticle  li {
 
 }
-.mainArticle  h1, .mainArticle h2 {
+h1, h2 {
 	font-size: 300%;
 	font-family: "Courier New", Courier, monospace;
 	color: #c7c75a;
 	/* text-shadow: 3px 3px 3px #000; */
 	margin: 30px 30px 10px 30px;
 }
-.mainArticle  p {
-	font-size: 130%;
+ p {
+	font-size: 110%;
 	color: #777676;
 	margin: 0 30px;
-	margin-bottom; 20px;
+	margin-bottom: 20px;
 	line-height: 150%;/* 行の高さを指定 */
 }
 #achievementsButton {
@@ -123,6 +128,8 @@ main {
 }
 /* Footer settings */
 footer {/* @memo フレックスデザイン未対応 */
+	position: relative;
+	top: 100px;
     border-top: solid 2px #000;
 	margin-top: 10px;
     width: 100%;
@@ -132,25 +139,37 @@ footer {/* @memo フレックスデザイン未対応 */
 footer  ul{
     display: flex;
     justify-content: space-around;
-    margin: 0 200px;
+    margin: 0 400px;
     align-items: center; /* only for icon */
 }
 
 footer a {
-    font-size: 11px;
+    font-size: 0.8rem;
     color: #000;
     text-decoration: none;
 }
+@media (max-width: 1500px) {
+	footer ul {
+    margin: 0 300px;
+	}
 
-
-@media (max-width: 850px) { 
+}
+@media (max-width: 1300px) {
+	footer ul {
+    margin: 0 200px;
+	}
+	footer a {
+    font-size: .6em;
+	}
+}
+@media (max-width: 900px) { 
   header { 
   /*
     flex-direction: column;
     align-items: center;
 */
   }
-  nav {
+  #headerNav {
     display:none;/* show only ham-menu */
   }
   main {

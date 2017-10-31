@@ -5,9 +5,16 @@
 $(function() {
     $(window).scroll(function() {
         if($(this).scrollTop() > 0) {
-            $('header').css('opacity', 0.8);
+            //$('header').css('opacity', 0.8);
+			$('header').css({
+				"background-color": "#fbfbfb"
+				, "opacity": "0.8"
+			});
         } else {
-            $('header').css('opacity', 1);
+			$('header').css({
+				"background-color": "#fff"
+				, "opacity": "0.8"
+			});
         }
 /**
 * 画面をスクロールしたときに、
@@ -16,23 +23,20 @@ $(function() {
 */
         var y = $(this).scrollTop();
         var main = $("main").css("background-position-y", parseInt(-y / 7) + "px");
-        
     })
 
     
 
 /**
-* Hamburger Menu
+* Hamburger Menu  
 */
-    $(window).scroll(function() {
-        $("#ham-menu").removeClass("open");
-        $('head').append('<style> #ham-menu:before { content: "≡" }</style>');
-    });
-    $("#ham-menu").click(function() {
-        $(this).addClass("open");
-        $('head').append('<style> #ham-menu:before { content: "x" }</style>');
-    });
-
+	$('.drawer').drawer();
+	$('.drawer-hamburger').on('click',function(){
+		$("#headerNav").css({"display": "none"});
+	});
+	 $('.drawer').on('drawer.closed', function(){
+		$("#headerNav").css({"display": "inline"});
+	});
 /**
 * 現在の画面
 */
