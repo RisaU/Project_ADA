@@ -3,9 +3,11 @@
 * fixedしているヘッダーやナビゲーションに対して、少し透過させる
 */
 $(function() {
+	var limitSize = '900';
+
     $(window).scroll(function() {
         if($(this).scrollTop() > 0) {
-            //$('header').css('opacity', 0.8);
+
 			$('header').css({
 				"background-color": "#fbfbfb"
 				, "opacity": "0.8"
@@ -16,27 +18,41 @@ $(function() {
 				, "opacity": "0.8"
 			});
         }
-/**
-* 画面をスクロールしたときに、
-* 背景画像をパララックス効果
-* parallax
-*/
+		/**
+		* 画面をスクロールしたときに、
+		* 背景画像をパララックス効果
+		* parallax
+		*/
         var y = $(this).scrollTop();
         var main = $("main").css("background-position-y", parseInt(-y / 7) + "px");
     })
-
-    
+   
 
 /**
 * Hamburger Menu  
 */
 	$('.drawer').drawer();
 	$('.drawer-hamburger').on('click',function(){
-		$("#headerNav").css({"display": "none"});
+		$("#headerNav").hide();
 	});
 	 $('.drawer').on('drawer.closed', function(){
-		$("#headerNav").css({"display": "inline"});
+		if($(window).width() < limitSize) {
+			//$("#headerNav").fadeIn(2000);
+		} else {
+			$("#headerNav").fadeIn(2000);
+		}
 	});
+
+	$(window).resize(function() {
+		if($(window).width() > limitSize) {
+			$("#headerNav").fadeIn(2000);
+
+		} else {
+			$("#headerNav").fadeOut(1000);	
+		}
+	});
+
+
 /**
 * 現在の画面
 */
@@ -62,7 +78,10 @@ $("header nav a").each(function() {
         fade: true,
     });
 
+
+
 var page = 0;
 var lastPage = parseInt($("#slider img").length - 1);       
-console.log(lastPage);      
+console.log(lastPage);  
+console.log("width: " + $(window).width());       
 });

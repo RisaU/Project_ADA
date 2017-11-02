@@ -10,11 +10,16 @@ body {
     /* border: solid 1px #000; */
     /* width: 1000px; */
     width: 100%;
+	max-width: 1900px;
+	min-width: 768px;
     height: 100%;
     margin: 0 auto;
     /* font-family: "trebuchet MS", calibri, sans-serif; */
 	font-family: "Lucida Console", Monaco, monospace;
     font-size: 16px;
+}
+#inner-wrapper {
+
 }
 /* Header settings */
 header {
@@ -23,14 +28,24 @@ header {
 	top: 0;
     width: 100%;
     height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; /* 上下中央揃え */
+	margin: 0 auto;
+
     background-color: #fff;
     z-index: 100;
 }
-header a {
-	margin-left: 10px;
+#headerContent {
+	display: flex;
+    justify-content: space-between;
+    align-items: center; /* 上下中央揃え */
+	width: 100%;
+	max-width: 1200px;
+	height: auto;
+	margin: 0 auto;
+}
+header  img {
+	width: 100%;
+	max-width: 150%;
+	height: auto;
 }
 header a  {
     width: 160px;
@@ -40,14 +55,12 @@ header a  {
 #headerNav {
     /* border: solid 1px #f00; @debug */
     width: 100%;
-    height: 100%;
-    margin-right: 80px;
+	max-width: 600px;
+    height: auto;
 }
 #headerNav ul {
     height: 100%;
     display: flex;
-    /* justify-content: space-around; */
-    justify-content: flex-end;
     align-items: center; /* 上下中央揃え(only for Nav) */
 
 }
@@ -65,7 +78,7 @@ header a  {
     color: black;
     font: "Trebuchet MS", Helvetica, sans-serif;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 130%;
     text-decoration: none;
 }
 /* 選択されてる画面のナビの背景色変更 */
@@ -88,18 +101,22 @@ main {
 	padding-bottom: 50px;/* 最下部にフッターを固定表示 */
 }
 #slideShow {	/* slide show */
+	margin: 0 auto;
 	margin-bottom: 50px;
 }
 
 .mainArticle {
 	/* border: solid 1px black; @debug */
+	width: 100%;
+	max-width: 1200px;
+	height: auto;
 	display: flex;
-	height: 700px;
-	margin: 10px;
+	margin: 10px auto;
 }
 .mainArticle  img {
 	/* border: solid 1px red; @debug */
 	width: 50%;
+	height: 70%;
 }
 .mainArticle  ul {
 	/* border: solid 1px red; @debug */
@@ -114,6 +131,11 @@ h1, h2 {
 	color: #c7c75a;
 	/* text-shadow: 3px 3px 3px #000; */
 	margin: 30px 30px 10px 30px;
+}
+.centerH1 {
+	margin: 5px auto;
+	text-align: center;
+	
 }
  p {
 	font-size: 110%;
@@ -155,6 +177,9 @@ footer a {
 
 }
 @media (max-width: 1300px) {
+	#headerNav a {
+
+	}
 	footer ul {
     margin: 0 200px;
 	}

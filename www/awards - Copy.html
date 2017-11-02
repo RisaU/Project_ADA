@@ -11,8 +11,12 @@
     <link rel="stylesheet" href="./function/slick/slick.css">
     <link rel="stylesheet" href="./css/style.css"> 
     <link rel="stylesheet" href="./css/hamburger.css"> 
-    <link rel="stylesheet" href="./css/slideShow.css"> 
-	<link rel="stylesheet" href="./css/button.css"> 
+
+
+
+	<!-- for timeline -->
+	<link rel="stylesheet" media="screen" href="./function/timeline/css/b1njTimeline.css">
+	<link rel="stylesheet" href="./css/awards.css"> 
 
 
     <!--[if lt IE 9]>
@@ -28,6 +32,11 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.1/js/drawer.min.js"></script>
 	<!-- for Slide show  -->
     <script type="text/javascript" src="./function/slick/slick.js" ></script>
+
+	<!-- for timeline -->
+	<script src="./function/timeline/js/moment.min.js"></script>
+	<script src="./function/timeline/js/jquery.b1njTimeline.js"></script>
+
 	<!-- original file -->
     <script type="text/javascript" src="./js/function.js"></script>
 </head>
@@ -36,7 +45,6 @@
 <div id="wrapper">
 <div id="inner-wrapper">
 <header id="header-fixed"  role="banner">
-<div id="headerContent">
     <!-- header LOGO -->
     <a href="index.html">
         <img src="./images/adaLogo.png" width="160" height="92" alt="Australian Design Architects"
@@ -48,11 +56,11 @@
         <ul>
             <li><a href="index.html" id="active">Home</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="project.html">Project Design</a></li>
+            <li><a href="#">Project Design</a></li>
             <li><a href="awards.html">Awards</a></li>
         </ul>
     </nav>
-</div>
+
 	
     <!-- Hamburger Menu   -->
     <button type="button" class="drawer-toggle drawer-hamburger">
@@ -63,56 +71,75 @@
       <ul class="drawer-menu">
         <li><a class="drawer-brand" href="index.html">Home</a></li>
         <li><a class="drawer-menu-item" href="#">Portfolio</a></li>
-        <li><a class="drawer-menu-item" href="project.html">Project Design</a></li>
+        <li><a class="drawer-menu-item" href="#">Project Design</a></li>
 		<li><a class="drawer-menu-item" href="awards.html">Awards</a></li>
 		<li><a class="drawer-menu-item" href="about.html">About Us</a></li>
 		<li><a class="drawer-menu-item" href="contactUs.html">Contact Us</a></li>
 		<li><a class="drawer-menu-item" href="#">Privacy/Legals</a></li>
       </ul>
     </nav>
+
 </header>
 <main>
-    <section id="slideShow">
-        <!-- <h1>Slide Show</h1> -->
-        <div id="slider">
-            <img src="./images/building_1.jpg" alt="Building1">
-            <img src="./images/building_2.jpg" alt="Building2">
-            <img src="./images/building_3.jpg" alt="Building3">
-            <img src="./images/building_4.jpg" alt="Building4">
-        </div>
-    </section>
-    <section class="mainArticle">
-		<img src="./images/building_10.jpg" alt="Building10">
-		<div>
-        <h1>Australian Design Architects</h1>
-        <p>Australian Design Architects is a team of multi-award winning architects based in Sydney, Australia.</p>
-        <p>We specialise in residential and commercial projects of high-quality finishes and details that are sensitive to 
-            context and the brief. Our distinctive style is known for its classic proportion and geometric form.</p>
-		</div>
-    </section>
-    <section class="mainArticle">
-		<div>
-        <h2>Happy To Work With You</h2>
-        <p>We enjoy using unexpected materials that challenge and surprise. 
-            We also believe that good architecture and respect for the environment go hand in hand.</p>
-        <p>Working with your ideas, we can nurture your project from conception to completion. Our innovative and inter-disciplinary skill-set, 
-            and extensive network of suppliers, means we can take a project from the first sketch right through to construction.</p>
-		</div>
-		<img src="./images/myStamp.jpg" alt="People">
-    </section>
+	<h1>Awards</h1>
 	<section class="mainArticle">
-		<ul id="achievementsButton">
-			<li><a href="#" class="buttonI">2017 environmentally design</a></li>
-			<li><a href="#" class="buttonI">2016 progressive design</a></li>
-			<li><a href="#" class="buttonI">2016 GOLD AWARD</a></li>
-		</ul>
 		<div>
-        <h2>Achievements</h2>
-        <p>Over the past 2 decades our extensive portfolio of residential and commercial projects has been recognised by our peers 
-            including the Royal Australian Institute of Architects, the Institute of Interior Designers and the Australian Design Council.</p>
+		<h2>Timeline</h2>
 		</div>
+		<ol id="timeline">
+			<li>
+				<time datetime="2015">2015</time>
+				<p>Stokes House Randwick</p>
+				<p>NSW Excellence in Housing Award 2015</p>
+			</li>
+			<li>
+				<time datetime="2014">2014</time>
+				<p>Blues Apartments Forestville</p>
+				<p>NSW Excellence in Housing Award Awards 2014</p>
+			</li>
+			<li>
+				<time datetime="2012">2012</time>
+				<p>The Paradise Apartments Potts Point</p>
+				<p>UDIA NSW High Density Award for excellence 2012</p>
+			</li>
+			<li>
+				<time datetime="2011">2011</time>
+				<p>Beautiful Waters Apartments Coogee</p>
+				<p>UDIA National High Density Housing Award for excellence 2011</p>
+			</li>
+			<li>
+				<time datetime="2010">2010</time>
+				<p>HIA Housing Award 2010</p>
+				<p>NSW Excellence in Housing Award 2010</p>
+			</li>
+			<li>
+				<time datetime="2010">2010</time>
+				<p>Biltong Elizabeth Bay</p>
+				<p>NSW Excellence in Housing Award 2010 (Restoration)</p>
+			</li>
+			<li>
+				<time datetime="2008 ">2008 </time>
+				<p>Oscar Apartments Camperdown</p>
+				<p>NSW Excellence in Medium Density Housing Award 2008 </p>
+			</li>
+			<li>
+				<time datetime="2006-07">July, 2006</time>
+				<p>Pandara Apartments Potts Point</p>
+				<p>UDIA National High Density Housing Award for excellence 2006/07</p>
+				<p>NSW Excellence in Housing Award 2006 (Apartments)</p>
+			</li>
+			<li>
+				<time datetime="2004">2004</time>
+				<p>Victoria Street Apartments Kirribilli</p>
+				<p>HIA Housing Award 2004</p>
+			</li>
+			<li>
+				<time datetime="2001 ">2001 </time>
+				<p>The Watchhouse Sydney</p>
+				<p>NSW Excellence in Housing Award 2001 (Restoration)</p>
+			</li>
+		</ol><!-- timeline -->
     </section>
-
 </main>
 
 <footer>
