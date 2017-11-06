@@ -19,3 +19,9 @@
 	/* to fit with header's width(1200px) */
 	padding-right: 78px; /* #mainArticle(1200px) - (#timeline + #awardsPhoto) */
 }
+time {
+	width: 40px;
+}
+.emphasize {
+	font-weight: bold;
+}
