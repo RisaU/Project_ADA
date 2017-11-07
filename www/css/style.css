@@ -208,6 +208,8 @@ footer a {
   }
   .mainArticle  img {
 	  width: 100%;
+      display: block;
+	  margin: 0 auto;
   }
   .mainArticle  ul {
 	/* border: solid 1px red; @debug */
