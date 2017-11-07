@@ -49,7 +49,7 @@ header {
 }
 header  img {
 	width: 100%;
-	max-width: 150%;
+	max-width: 150px;
 	height: auto;
 }
 header a  {
