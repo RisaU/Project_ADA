@@ -17,9 +17,14 @@ body {
     /* font-family: "trebuchet MS", calibri, sans-serif; */
 	font-family: "Lucida Console", Monaco, monospace;
     font-size: 16px;
+	background: url("./../images/bg.png") no-repeat center top;
+	background-attachment: fixed;/* for parallax */
+}
+#wrapper {
+	
 }
 #inner-wrapper {
-
+	
 }
 /* Header settings */
 header {
@@ -93,18 +98,18 @@ nav a:hover {
 /* Contents settings */
 
 main {
-	background: url("./../images/bg.png") no-repeat center top;
-	background-attachment: fixed;/* for parallax */
 	height:100%;
 	position: relative;
 	top: 100px;
 	padding-bottom: 50px;/* 最下部にフッターを固定表示 */
 }
-#slideShow {	/* slide show */
-	margin: 0 auto;
-	margin-bottom: 50px;
+.mHeader {
+	width: 100%;
+	max-width: 1200px;
+	height: auto;
+	margin: 5px auto;
+	text-align: center;
 }
-
 .mainArticle {
 	/* border: solid 1px black; @debug */
 	width: 100%;
@@ -116,7 +121,9 @@ main {
 .mainArticle  img {
 	/* border: solid 1px red; @debug */
 	width: 50%;
-	height: 70%;
+	max-width: 600px;
+	height: auto;
+	max-height: 400px;
 }
 .mainArticle  ul {
 	/* border: solid 1px red; @debug */
@@ -132,11 +139,7 @@ h1, h2 {
 	/* text-shadow: 3px 3px 3px #000; */
 	margin: 30px 30px 10px 30px;
 }
-.centerH1 {
-	margin: 5px auto;
-	text-align: center;
-	
-}
+
  p {
 	font-size: 110%;
 	color: #777676;

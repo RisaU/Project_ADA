@@ -2,79 +2,111 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Australian Design Architects</title>
-    <meta name="author" content="      ADD YOUR NAME AND YOUR EMAIL ADDRESS HERE     ">
-    <link rel="stylesheet" href="./function/slick/slick-theme.css">
-    <link rel="stylesheet" href="./function/slick/slick.css">
-    <link rel="stylesheet" href="./css/style.css"> 
-    <link rel="stylesheet" href="./css/hamburger.css"> 
-    <link rel="stylesheet" href="./css/slideShow.css"> 
-
+    <meta name="author" content="Risa Ueda">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="./css/style.css"> 
+    <link rel="stylesheet" href="./css/hamburger.css">  
+	<link rel="stylesheet" href="./css/button.css"> 
+	<link rel="stylesheet" href="./function/ImageViewer/imageviewer.css"> 
+	<!-- for Portfolio -->
+	<link rel="stylesheet" href="./css/portfolio.css">
+
+
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
-    <script type="text/javascript" src="./function/slick/slick.js" ></script>
+	<!-- for Hamburger Menu  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.1/css/drawer.min.css">
+	<!-- jquery & iScroll -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.3/iscroll.min.js"></script>
+	<!-- for ham -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.1/js/drawer.min.js"></script>
+    <link rel="stylesheet" href="./css/hamburger.css">  
+	<!-- for Gallery -->
+	<script src="./function/ImageViewer/imageviewer.js"></script>
+	<!-- original file -->
     <script type="text/javascript" src="./js/function.js"></script>
+	<!-- for Portfolio -->
+	<script type="text/javascript" src="./js/portfolio.js"></script>
 </head>
-<body>
+
+<body  class="drawer drawer--right">
 <div id="wrapper">
 <div id="inner-wrapper">
-<header id="header-fixed">
+<header id="header-fixed"  role="banner">
+<div id="headerContent">
     <!-- header LOGO -->
     <a href="index.html">
         <img src="./images/adaLogo.png" width="160" height="92" alt="Australian Design Architects"
             title="Australian Design Architects">
     </a>
-    <nav>
+	
+	<!-- main navigation -->
+    <nav id="headerNav">
         <ul>
             <li><a href="index.html" id="active">Home</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="#">Project Design</a></li>
-            <li><a href="awards.html">Awards</a></li>
+            <li><a href="project.html">Project Design</a></li>
+            <li><a href="contactUs.html">Contact Us</a></li>
         </ul>
     </nav>
-    <div id="ham-menu">
-        <ul>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Project Design</a></li>
-            <li><a href="awards.html">Awards</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Privacy/Legals</a></li>
-        </ul>
-    </div><!-- ham-menu -->
+</div>
+	
+    <!-- Hamburger Menu   -->
+    <button type="button" class="drawer-toggle drawer-hamburger">
+      <span class="sr-only">toggle navigation</span>
+      <span class="drawer-hamburger-icon"></span>
+    </button>
+    <nav class="drawer-nav" role="navigation">
+      <ul class="drawer-menu">
+        <li><a class="drawer-brand" href="index.html">Home</a></li>
+        <li><a class="drawer-menu-item" href="portfolio.html">Portfolio</a></li>
+        <li><a class="drawer-menu-item" href="project.html">Project Design</a></li>
+		<li><a class="drawer-menu-item" href="awards.html">Awards</a></li>
+		<li><a class="drawer-menu-item" href="about.html">About Us</a></li>
+		<li><a class="drawer-menu-item" href="contactUs.html">Contact Us</a></li>
+		<li><a class="drawer-menu-item" href="privacy.html">Privacy/Legals</a></li>
+      </ul>
+    </nav>
 </header>
-
-
-
 <main>
-    <section id="mainContent">
-        <!-- <h1>Slide Show</h1> -->
-        <div id="slider">
-            <img src="./images/building_1.jpg">
-            <img src="./images/building_2.jpg">
-            <img src="./images/building_3.jpg">
-            <img src="./images/building_4.jpg">
-        </div>
+	<section class="mHeader">
+		<h1>Portfolio</h1>
+		<p>At ADA we specialise in sophisticated and distinctive residential projects, from high quality individual houses to multi-unit apartment developments. ADA work encompasses a wide variety of architectural styles ranging from heritage restoration work to innovative contemporary buildings.</p>
+		<p>Current commissions include residential, commercial, maritime, heritage restoration, refurbishment and interior fit-out projects.</p>
+	</section>
+    <section class="gallery">
+		<div id="image-gallery-1" class="cf">
+			<img src="./images/building_1_sml.jpg" data-high-res-src="./images/building_1.jpg" alt="building1" title="building1" class="gallery-items">
+			<img src="./images/building_2_sml.jpg" data-high-res-src="./images/building_2.jpg" alt="building2" title="building2" class="gallery-items">
+			<img src="./images/building_3_sml.jpg" data-high-res-src="./images/building_3.jpg" alt="building3" title="building3" class="gallery-items">
+			<img src="./images/building_4_sml.jpg" data-high-res-src="./images/building_4.jpg" alt="building4" title="building4" class="gallery-items">
+			<img src="./images/building_5_sml.jpg" data-high-res-src="./images/building_5.jpg" alt="building5" title="building5" class="gallery-items">
+			<img src="./images/building_6_sml.jpg" data-high-res-src="./images/building_6.jpg" alt="building6" title="building6" class="gallery-items">
+			<img src="./images/building_7_sml.jpg" data-high-res-src="./images/building_7.jpg" alt="building7" title="building7" class="gallery-items">
+			<img src="./images/building_8_sml.jpg" data-high-res-src="./images/building_8.jpg" alt="building8" title="building8" class="gallery-items">
+			<img src="./images/building_9_sml.jpg" data-high-res-src="./images/building_9.jpg" alt="building9" title="building9" class="gallery-items">
+			<img src="./images/building_10_sml.jpg" data-high-res-src="./images/building_10.jpg" alt="building10" title="building9" class="gallery-items">
+		</div>
     </section>
-
 
 </main>
 
 <footer>
     <ul>
         <li><a href="#">All rights reserved. &copy; oooooooo company 2005-2017</a></li>
-        <li><a href="#">privacy</a></li>
+        <li><a href="privacy.html">privacy</a></li>
         <li><a href="#">Site By Risa.U</a></li>
-        <li><a href="http://facebook.com/" target="_blank"><img src="images/icon_Facebook.png" width="25" height="25"
-            alt="Facebook"></a></li>        
-        <li><a href=""><img src="images/icon_Gmai.png" width="25" height="25"
-            alt="Facebook"></a></li>
-        <li><a href="http://instagram.com/" target="_blank"><img src="images/icon_Instagram.png" width="25" height="25"
-            alt="Facebook"></a></li>
+         <li><a href="http://facebook.com/" target="_blank"><img src="images/icon_Facebook.png" width="25" height="25"
+            alt="Facebook"></a><a href=""><img src="images/icon_Gmai.png" width="25" height="25"
+            alt="Facebook"></a><a href="http://instagram.com/" target="_blank"><img src="images/icon_Instagram.png" width="25" height="25"
+            alt="Facebook"></a>
+		</li> 
     </ul>
 </footer>
 </div><!-- inner-wrapper -->

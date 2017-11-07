@@ -24,7 +24,7 @@ $(function() {
 		* parallax
 		*/
         var y = $(this).scrollTop();
-        var main = $("main").css("background-position-y", parseInt(-y / 7) + "px");
+        var main = $("body").css("background-position-y", parseInt(-y / 15) + "px");
     })
    
 
@@ -65,21 +65,7 @@ $("header nav a").each(function() {
         $(this).removeAttr("id");
     }
     
-})
-/**
-* Slide show
-*
-*/
-    $("#slider").slick({
-        accessiblility: true,
-        autoplay: true,
-        autoplaySpeed: 8000,
-        dots: true,
-        fade: true,
-    });
-
-
-
+})	
 var page = 0;
 var lastPage = parseInt($("#slider img").length - 1);       
 console.log(lastPage);  

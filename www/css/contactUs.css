@@ -36,8 +36,12 @@ p {
 	line-height: 60%;
 }	
 #twoColunm {
-	margin-top: 50px;
 	display: flex;
+	width: 100%;
+	max-width: 1200px;
+	height: auto;
+	margin: 0 auto;
+	margin-top: 50px;
 }
 #contactInfo {
 	position: relative;
@@ -119,6 +123,7 @@ iframe {
 	display: inline-block;
 	width: 130px;
 	text-align: left;
+	margin-bottom: 5px;
 }
 #contactform  input , #contactform textarea{
 	width: 400px;

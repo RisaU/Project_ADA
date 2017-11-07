@@ -2,3 +2,11 @@
 	margin: auto 10px;
 
 }
+.gallery {
+	/* border: solid 1px black; @debug */
+	width: 100%;
+	max-width: 1200px;
+	height: auto;
+	display: flex;
+	margin: 10px auto;
+}

@@ -1,0 +1,48 @@
+﻿#slideShow {	/* slide show */
+	/* border: solid 1px black; @debug */
+	position: relative;/* for fixing the position of arrows */
+	width: 100%;
+	max-width: 1200px;
+	height: auto;
+	max-height: 600px;
+	margin: 50px auto;
+}
+#slideShow  img {
+	width: 100%;
+	height: auto;
+	max-height: 500px;
+}
+.nav-arrows {
+	width: 100%;
+	max-width: 1200px;
+	height: auto;
+}
+/** arrow left */
+.nav-arrows a {
+	top: 50%;
+	left: -5%;
+}
+/** arrow right */
+.nav-arrows a:first-child{
+	top: 50%;
+	right: -5%;
+}
+.nav-options {
+	display: flex;
+	right: 0;
+	bottom: 30px;
+}
+
+
+
+
+
+@media (max-width: 1350px) {
+	.nav-arrows a {
+		left: 0%;
+	}
+	/** arrow right */
+	.nav-arrows a:first-child{
+		right: 0%;
+	}
+}

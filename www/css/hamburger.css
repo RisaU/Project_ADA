@@ -1,4 +1,7 @@
-﻿/* ハンバーガーメニュー */
+﻿/**
+* ハンバーガーメニュー
+* ref: http://git.blivesta.com/drawer/
+*/
 #ham-menu {
     width: 250px;
     background-color: #ccc;
@@ -31,22 +34,13 @@
     transform: translate(-150px);
     opacity: 0.9;
 }
+.drawer-menu-item {
+	font-size: 130%;
+	line-height: 120%;
+	max-height: 40px;
 
-
-
-
-
-
-
-
-
-
-/*hover 時の処理*/
-/*
-#ham-menu:hover {
-    transform: translate(-150px);
 }
-#ham-menu:hover {
-    opacity: 0.9;
+/* bug fix about the header of slideshow at home page */
+.sb-description {
+	z-index: 0;
 }
-*/
