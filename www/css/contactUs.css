@@ -98,7 +98,7 @@ iframe {
 	height: auto;
 	height: 100%;
 	min-height:200px;
-	z-index:100;
+	z-index:2;
 	padding:30px;
 	border:1px solid #383838;
 	/* background: #eee; */

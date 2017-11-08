@@ -12,7 +12,7 @@
     top: 0;
     right: -250px;
     transition: transform0.3s linear 0s;/* 0.3s は変化するのにかかる時間 */
-    z-index: 1000;
+    z-index: 100;
 }
 /*メニューアイコン部分は疑似要素で*/
 #ham-menu::before {
@@ -43,4 +43,10 @@
 /* bug fix about the header of slideshow at home page */
 .sb-description {
 	z-index: 0;
+}
+/**
+* for ham
+*/
+.drawer-overlay {
+	z-index: 10;
 }

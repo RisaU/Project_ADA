@@ -11,9 +11,10 @@
     <link rel="stylesheet" href="./css/style.css"> 
     <link rel="stylesheet" href="./css/hamburger.css">  
 	<link rel="stylesheet" href="./css/button.css"> 
+	<link rel="stylesheet" href="./function/ImageViewer/imageviewer.css"> 
 	<!-- for Portfolio -->
 	<link rel="stylesheet" href="./css/portfolio.css">
-	
+
 
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -27,9 +28,14 @@
 	<!-- for ham -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.1/js/drawer.min.js"></script>
     <link rel="stylesheet" href="./css/hamburger.css">  
+	<!-- for Gallery -->
+	<script src="./function/ImageViewer/imageviewer.js"></script>
 	<!-- original file -->
     <script type="text/javascript" src="./js/function.js"></script>
+	<!-- for Portfolio -->
+	<script type="text/javascript" src="./js/portfolio.js"></script>
 </head>
+
 <body  class="drawer drawer--right">
 <div id="wrapper">
 <div id="inner-wrapper">
@@ -75,82 +81,21 @@
 		<p>At ADA we specialise in sophisticated and distinctive residential projects, from high quality individual houses to multi-unit apartment developments. ADA work encompasses a wide variety of architectural styles ranging from heritage restoration work to innovative contemporary buildings.</p>
 		<p>Current commissions include residential, commercial, maritime, heritage restoration, refurbishment and interior fit-out projects.</p>
 	</section>
-	<section class="gallery">
-		<figure>
-			<img src="./images/building_4_sml.jpg" alt="building4" class="transform02">
-			<figcaption>
-			<h3>Architects 1</h3>
-			<p></p>
-			</figcaption>
-		</figure>
-		<figure>
-			<img src="./images/building_6_sml.jpg" alt="building" class="transform02">
-			<figcaption>
-			<h3>Architects 2</h3>
-			<p></p>
-			</figcaption>
-		</figure>
-		<figure>
-			<img src="./images/building_8_sml.jpg" alt="building" class="transform02">
-			<figcaption>
-			<h3>Architects 3</h3>
-			<p></p>
-			</figcaption>
-		</figure>
-	</section>
-	<section class="gallery col4">
-		<figure>
-			<img src="./images/building_10_sml.jpg" alt="building" class="transform02">
-			<figcaption>
-			<h3>Architects 4</h3>
-			<p></p>
-			</figcaption>
-		</figure>
-		<figure>
-			<img src="./images/building_11_sml.jpg" alt="building" class="transform02">
-			<figcaption>
-			<h3>Architects 5</h3>
-			<p></p>
-			</figcaption>
-		</figure>
-		<figure>
-			<img src="./images/building_12_sml.jpg" alt="building" class="transform02">
-			<figcaption>
-			<h3>Architects 6</h3>
-			<p></p>
-			</figcaption>
-		</figure>
-		<figure>
-			<img src="./images/building_14_sml.jpg" alt="building1" class="transform02">
-			<figcaption>
-			<h3>Architects 7</h3>
-			<p></p>
-			</figcaption>
-		</figure>
-	</section>
-	<section class="gallery">
-		<figure>
-			<img src="./images/building_1_sml.jpg" alt="building1" class="transform02">
-			<figcaption>
-			<h3>Architects 8</h3>
-			<p></p>
-			</figcaption>
-		</figure>
-		<figure>
-			<img src="./images/building_2_sml.jpg" alt="building1" class="transform02">
-			<figcaption>
-			<h3>Architects 9</h3>
-			<p></p>
-			</figcaption>
-		</figure>
-		<figure>
-			<img src="./images/building_5_sml.jpg" alt="building1" class="transform02">
-			<figcaption>
-			<h3>Architects 10</h3>
-			<p></p>
-			</figcaption>
-		</figure>
-	</section>
+    <section class="gallery">
+		<div id="image-gallery-1" class="cf">
+			<img src="./images/building_1_sml.jpg" data-high-res-src="./images/building_1.jpg" alt="building1" title="building1" class="gallery-items">
+			<img src="./images/building_2_sml.jpg" data-high-res-src="./images/building_2.jpg" alt="building2" title="building2" class="gallery-items">
+			<img src="./images/building_3_sml.jpg" data-high-res-src="./images/building_3.jpg" alt="building3" title="building3" class="gallery-items">
+			<img src="./images/building_4_sml.jpg" data-high-res-src="./images/building_4.jpg" alt="building4" title="building4" class="gallery-items">
+			<img src="./images/building_5_sml.jpg" data-high-res-src="./images/building_5.jpg" alt="building5" title="building5" class="gallery-items">
+			<img src="./images/building_6_sml.jpg" data-high-res-src="./images/building_6.jpg" alt="building6" title="building6" class="gallery-items">
+			<img src="./images/building_7_sml.jpg" data-high-res-src="./images/building_7.jpg" alt="building7" title="building7" class="gallery-items">
+			<img src="./images/building_8_sml.jpg" data-high-res-src="./images/building_8.jpg" alt="building8" title="building8" class="gallery-items">
+			<img src="./images/building_9_sml.jpg" data-high-res-src="./images/building_9.jpg" alt="building9" title="building9" class="gallery-items">
+			<img src="./images/building_10_sml.jpg" data-high-res-src="./images/building_10.jpg" alt="building10" title="building9" class="gallery-items">
+		</div>
+    </section>
+
 </main>
 
 <footer>

@@ -6,6 +6,7 @@
 	height: auto;
 	max-height: 600px;
 	margin: 50px auto;
+	overflow: hidden;
 }
 #slideShow  img {
 	width: 100%;
@@ -32,8 +33,25 @@
 	right: 0;
 	bottom: 30px;
 }
-
-
+/* pic caption */
+.sb-description {
+	display: none;
+	padding: 250px;
+	width: 10%;
+	border-left: none;
+	bottom: 0;
+	left: 0;
+	/* background: linear-gradient(255deg,  transparent 200px, #0099ff 10px); */
+	background: linear-gradient(255deg,  transparent 200px, #fff 10px);
+}
+.sb-description h3 {
+	color: #c7c75a;
+	font-size: 500%;
+	position: absolute;
+	top: 40px;
+	left: 30px;
+	line-height: 120%;
+}
 
 
 

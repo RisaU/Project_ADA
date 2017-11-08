@@ -11,6 +11,9 @@
 	font-size: 90%;
 
 }
+.mainArticle img {
+	max-height: 875px;
+}
 #awardsPhoto {
 	width: 100%;
 	max-width: 500px;

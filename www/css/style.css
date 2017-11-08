@@ -54,7 +54,7 @@ header  img {
 }
 header a  {
     width: 160px;
-    height: 92px;
+    height: 100px;
 }
 /* Navigation */
 #headerNav {
@@ -116,14 +116,14 @@ main {
 	max-width: 1200px;
 	height: auto;
 	display: flex;
-	margin: 10px auto;
+	margin: 0 auto;
 }
 .mainArticle  img {
 	/* border: solid 1px red; @debug */
 	width: 50%;
 	max-width: 600px;
 	height: auto;
-	max-height: 400px;
+	max-height: 480px;
 }
 .mainArticle  ul {
 	/* border: solid 1px red; @debug */
@@ -173,6 +173,7 @@ footer a {
     color: #000;
     text-decoration: none;
 }
+
 @media (max-width: 1500px) {
 	footer ul {
     margin: 0 300px;
