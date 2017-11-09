@@ -6,31 +6,25 @@
     <title>Australian Design Architects</title>
 	<link rel="shortcut icon" href="./images/favicon.ico" type="image/vnd.microsoft.icon">
     <meta name="author" content="Risa Ueda">
-	
-	<link rel="stylesheet" href="./css/style.css">
-	<link rel="stylesheet" href="./css/button.css"> 
-	<link rel="stylesheet" href="./css/contactUs.css"> 
-
+	<!-- for Hamburger Menu  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.1/css/drawer.min.css">
+	<link rel="stylesheet" href="./style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
-	<!-- for Hamburger Menu  -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.1/css/drawer.min.css">
 	<!-- jquery & iScroll -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.3/iscroll.min.js"></script>
 	<!-- for ham -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.1/js/drawer.min.js"></script>
-	<link rel="stylesheet" href="./css/hamburger.css">
 	<!-- original file -->
     <script type="text/javascript" src="./js/function.js"></script>
 
  
 </head>
 
-<body  class="drawer drawer--right">
+<body  class="drawer drawer--right" id="contact">
 <div id="wrapper">
 <div id="inner-wrapper">
 <header id="header-fixed"  role="banner">
@@ -51,8 +45,6 @@
         </ul>
     </nav>
 </div>
-
-	
     <!-- Hamburger Menu   -->
     <button type="button" class="drawer-toggle drawer-hamburger">
       <span class="sr-only">toggle navigation</span>
@@ -69,7 +61,6 @@
 		<li><a class="drawer-menu-item" href="privacy.html">Privacy/Legals</a></li>
       </ul>
     </nav>
-
 </header>
 <main>
 	<section class="mHeader">
@@ -80,31 +71,31 @@
 	<div id="twoColunm">
 	<section id="contactform">
 		<h2>Contact form</h2>
-		<form action="" method="post"  autocomplete="on">
+		<form action="contactUs.html" method="post"  autocomplete="on">
 			<div id="inputArea">
 			<p>
-				<label for="username" class="iconic user" > Name <span class="required">*</span></label>
+				<label for="username" class="iconic user" >Name<span class="required">*</span></label>
 				<input type="text" name="username" id="username"  required="required" placeholder="Your name"  />
 			</p>
 	 
 			<p>
-				<label for="usermail" class="iconic mail-alt"> Email <span class="required">*</span></label>
+				<label for="usermail" class="iconic mail-alt">Email<span class="required">*</span></label>
 				<input type="email" name="usermail" id="usermail" placeholder="aaa.bbb@gmail.com" required="required"  />
 			</p>
 	 
 			<p>
-				<label for="usersite" class="iconic link"> Website </label>
+				<label for="usersite" class="iconic link">Website</label>
 				<input type="url" name="usersite" id="usersite"  placeholder="e.g.: http://www.aaa.com" />
 			</p>
 	 
 			<p>
-				<label for="subject" class="iconic quote-alt"> Title </label>
+				<label for="subject" class="iconic quote-alt">Title</label>
 				<input type="text" name="subject" id="subject"  placeholder="What would you like to talk about?" />
 			</p>
 	 
 			<p>
-				<label for="message" class="iconic comment"> Comment  <span class="required">*</span></label>
-				<textarea placeholder="Comment"  required="required" ></textarea>
+				<label for="message" class="iconic comment">Comment<span class="required">*</span></label>
+				<textarea placeholder="message"  required="required" id="message"></textarea>
 			</p>
 	 
 			<!-- <p class="indication"><span class="required">*</span> Necessary</p>  -->
