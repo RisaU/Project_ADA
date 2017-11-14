@@ -26,7 +26,6 @@ $(function() {
         var y = $(this).scrollTop();
         var main = $("body").css("background-position-y", parseInt(-y / 15) + "px");
     })
-   
 
 /**
 * Hamburger Menu  
@@ -51,8 +50,23 @@ $(function() {
 			$("#headerNav").fadeOut(1000);	
 		}
 	});
-
-
+/**
+* Button of "back to Top"
+*/
+    $("#topBtn").hide();
+    $(window).on("scroll", function() {
+        if ($(this).scrollTop() > 100) {
+            $("#topBtn").fadeIn(3000); // shown up
+        } else { 
+            $("#topBtn").fadeOut("fast"); //hide
+        }
+    });
+    $('#topBtn').click(function () {
+        $('body,html').animate({
+        scrollTop: 0
+        }, 400);
+        return false;
+    });
 /**
 * 現在の画面
 */
@@ -68,6 +82,6 @@ $("header nav a").each(function() {
 })	
 var page = 0;
 var lastPage = parseInt($("#slider img").length - 1);       
-console.log(lastPage);  
-console.log("width: " + $(window).width());       
+// console.log(lastPage);  
+// console.log("width: " + $(window).width());       
 });

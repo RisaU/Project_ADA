@@ -146,7 +146,7 @@ h1, h2 {
 	margin: 30px 30px 10px 30px;
 }
 
- p {
+p {
 	font-size: 110%;
 	color: #777676;
 	margin: 0 30px;
@@ -167,7 +167,7 @@ footer {/* @memo フレックスデザイン未対応 */
     height: 22px;
 
 }
-footer  ul{
+footer  ul {
     display: flex;
     justify-content: space-around;
     margin: 0 400px;
@@ -256,6 +256,39 @@ footer a {
     position: relative;
     cursor: pointer;
 }
+/* back to Top */
+.topBtn {
+  position:fixed; /*固定*/
+  bottom:35px; /*場所を右下に移動*/
+  right:12px; /*場所を右下に移動*/
+  display:block; /*aタグをblock要素に変更*/
+  background-color:rgba(0,0,0,0.5); /*以下、デザインはご自由に！！*/
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+  font-size:11px;
+  width:60px;
+  height:60px;
+  text-align:center;
+  line-height:22px;
+  border-radius:30px;
+  padding-top:30px;
+  box-sizing:border-box;
+}
+.topBtn:before {
+  /* content:'\25B2'; */
+  content: "^";
+  position:absolute;
+  top:10px;
+  left:0;
+  width:100%;
+  text-align:center;
+  font-size:20px;
+}
+.topBtn:hover {
+  opacity:0.7;
+}
+
 /**
 * @portfolio
 */
@@ -471,8 +504,11 @@ figure:hover .transform02 {
 * @awards
 */
 #timeline {
+	width: 600px;
+	/*
 	width: 100%;
 	max-width: 600px;
+	*/
 	height: auto;
 	padding: 10px;
 	border:1px solid #383838;
@@ -483,16 +519,14 @@ figure:hover .transform02 {
 	font-size: 90%;
 
 }
-#awards .mainArticle img {
-	max-height: 875px;
-}
+
 #awardsPhoto {
-	width: 100%;
+	width: 50%;
 	max-width: 500px;
-	height: 50%;
+	max-height: none;
 	margin-top: 100px;
 	/* to fit with header's width(1200px) */
-	padding-right: 78px; /* #mainArticle(1200px) - (#timeline + #awardsPhoto) */
+	padding-left: 78px; /* #mainArticle(1200px) - (#timeline + #awardsPhoto) */
 }
 #awards time {
 	width: 40px;
@@ -546,67 +580,98 @@ figure:hover .transform02 {
     100% { transform: rotate(0deg); }
 }
 
-@media (max-width: 1500px) {
-	footer ul {
-    margin: 0 300px;
-	}
 
-}
-@media (max-width: 1350px) {/* @slideshow */
-	.nav-arrows a {
-		left: 0%;
-	}
-	/** arrow right */
-	.nav-arrows a:first-child{
-		right: 0%;
-	}
-	#contact h2 {
-		font-size:200%;
-	}
 
-	#contactform , table th, td {
-		font-size: 90%;
+	@media (max-width: 1500px) {
+		footer ul {
+		margin: 0 300px;
+		}
 	}
-}
-@media (max-width: 1300px) {
-	#headerNav a {
+	@media (max-width: 1350px) {/* @slideshow */
+		.nav-arrows a {
+			left: 0%;
+		}
+		/** arrow right */
+		.nav-arrows a:first-child{
+			right: 0%;
+		}
+		#contact h2 {
+			font-size:200%;
+		}
 
+		#contactform , table th, td {
+			font-size: 90%;
+		}
 	}
-	footer ul {
-    margin: 0 200px;
+	@media (max-width: 1300px) {
+		#headerNav a {
+
+		}
+		footer ul {
+			margin: 0 200px;
+		}
+		footer a {
+		
+		}
 	}
-	footer a {
-    font-size: .6em;
+	@media (max-width: 1100px) {
+		#awardsPhoto {
+		
+		}
+		footer ul {
+			margin: 0 150px;
+		}
 	}
-}
-@media (max-width: 900px) { 
-  header { 
-  /*
-    flex-direction: column;
-    align-items: center;
-*/
-  }
-  #headerNav {
-    display:none;/* show only ham-menu */
-  }
-  main {
-    width: 100%;
-  }
-  .mainArticle {
-	  display: inline;
-  }
-  .mainArticle  img {
-	  width: 100%;
-      display: block;
-	  margin: 0 auto;
-  }
-  .mainArticle  ul {
-	/* border: solid 1px red; @debug */
-	width: 100%;
-	text-align: center;
-  }
-	#twoColunm {
-	display: flex;
-	flex-direction: column;
+	@media (max-width: 1000px) {
+		footer ul {
+			margin: 0 90px;
+		}
 	}
-} 
+	@media (max-width: 900px) { 
+	  header { 
+	  /*
+		flex-direction: column;
+		align-items: center;
+	*/
+	  }
+	  #headerNav {
+		display:none;/* show only ham-menu */
+	  }
+	  #headerContent a {
+		margin: 0 auto;
+	  }
+	  main {
+		width: 100%;
+	  }
+	  .mainArticle {
+		  display: inline;
+	  }
+	  .mainArticle  img {
+		  width: 100%;
+		  display: block;
+		  margin: 0 auto;
+	  }
+	  .mainArticle  ul {
+		/* border: solid 1px red; @debug */
+		width: 100%;
+		text-align: center;
+	  }
+		#twoColunm {
+		display: flex;
+		flex-direction: column;
+		}
+		footer ul {
+			display: block;
+			margin: 10px 30px;
+		}
+		#awards h2 {
+			text-align: center;
+		}
+		#timeline {
+			margin: 0 auto;
+		}
+		#awardsPhoto {
+			padding: 0;
+		}
+		
+	} 
