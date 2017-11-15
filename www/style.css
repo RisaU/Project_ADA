@@ -614,8 +614,8 @@ figure:hover .transform02 {
 		}
 	}
 	@media (max-width: 1100px) {
-        #headerContent {
-       
+        main {
+        padding: 0 10px;
         }
         
 	    
