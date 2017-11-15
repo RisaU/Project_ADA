@@ -40,7 +40,6 @@ header {
     width: 100%;
     height: 100px;
 	margin: 0 auto;
-
     background-color: #fff;
     z-index: 100;
 }
@@ -59,8 +58,9 @@ header  img {
 	height: auto;
 }
 header a  {
-    width: 160px;
-    height: 100px;
+	width: 100%;
+    max-width: 160px;
+    max-height: 100px;
 }
 /* Navigation */
 #headerNav {
@@ -189,7 +189,8 @@ footer a {
 	max-width: 1200px;
 	height: auto;
 	max-height: 600px;
-	margin: 50px auto;
+	/* margin: 50px auto; */
+	margin:  0 auto;
 }
 #slideShow  img {
 	width: 100%;
@@ -301,6 +302,7 @@ footer a {
 	justify-content: space-between;
 	margin: 10px auto;
 	overflow: hidden;
+	/* flex-flow: wrap; */
 }
 
 figure {
@@ -345,14 +347,11 @@ figure:hover figcaption {
 /* hovwer action */
 /*
 .transform02 {
-  -webkit-transform: rotate(15deg) scale(1.4);
-  transform: rotate(5deg) scale(1.4);
-  -webkit-transition: all .3s ease-in-out;
+  transform: scale(1.4);
   transition: all .3s ease-in-out;
 }
 figure:hover .transform02 {
-  -webkit-transform: rotate(0) scale(1);
-  transform: rotate(0) scale(1);
+  transform: scale(1);
 }
 */
 /**
@@ -677,6 +676,9 @@ figure:hover .transform02 {
 		}
 		#awardsPhoto {
 			padding: 0;
+		}
+		.gallery {
+
 		}
 		
 	} 
