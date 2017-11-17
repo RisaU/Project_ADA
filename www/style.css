@@ -612,11 +612,8 @@ figure:hover .transform02 {
 		}
 	}
 	@media screen and (max-width: 1100px) {
-        #headerContent {
-       
-        }
-		#awardsPhoto {
-		
+		#inner-wrapper {
+		    padding: 0 1%;
 		}
 		footer ul {
 			margin: 0 150px;
