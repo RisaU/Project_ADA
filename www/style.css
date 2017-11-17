@@ -17,7 +17,6 @@ body {
     /* width: 1000px; */
     width: 100%;
 	max-width: 1900px;
-	min-width: 768px;
     height: 100%;
     margin: 0 auto;
     /* font-family: "trebuchet MS", calibri, sans-serif; */
@@ -27,7 +26,8 @@ body {
 	background-attachment: fixed;/* for parallax */
 }
 #wrapper {
-	
+	width: 100%;
+	min-width: 320px;
 }
 #inner-wrapper {
 	
@@ -38,7 +38,7 @@ header {
     position: fixed;
 	top: 0;
     width: 100%;
-    height: 100px;
+    height: auto;
 	margin: 0 auto;
     background-color: #fff;
     z-index: 100;
@@ -581,12 +581,12 @@ figure:hover .transform02 {
 
 
 
-	@media (max-width: 1500px) {
+	@media screen and (max-width: 1500px) {
 		footer ul {
 		margin: 0 300px;
 		}
 	}
-	@media (max-width: 1350px) {/* @slideshow */
+	@media screen and (max-width: 1350px) {/* @slideshow */
 		.nav-arrows a {
 			left: 0%;
 		}
@@ -602,9 +602,12 @@ figure:hover .transform02 {
 			font-size: 90%;
 		}
 	}
-	@media (max-width: 1300px) {
+	@media screen and (max-width: 1300px) {
 		#headerNav a {
 
+		}
+		main {
+			/* padding: 0 10px; */
 		}
 		footer ul {
 			margin: 0 200px;
@@ -613,12 +616,10 @@ figure:hover .transform02 {
 		
 		}
 	}
-	@media (max-width: 1100px) {
-        main {
-        padding: 0 10px;
+	@media screen and (max-width: 1100px) {
+        #headerContent {
+       
         }
-        
-	    
 		#awardsPhoto {
 		
 		}
@@ -626,12 +627,15 @@ figure:hover .transform02 {
 			margin: 0 150px;
 		}
 	}
-	@media (max-width: 1000px) {
+	@media screen and (max-width: 1000px) {
+		main {
+			/* padding: 0 10px; */
+		}
 		footer ul {
 			margin: 0 90px;
 		}
 	}
-	@media (max-width: 900px) { 
+	@media screen and (max-width: 900px) { 
 	  header { 
 	  /*
 		flex-direction: column;
@@ -680,5 +684,38 @@ figure:hover .transform02 {
 		.gallery {
 
 		}
-		
 	} 
+	/* for mobile */
+	@media screen and (max-width: 480px) { 
+		#wrapper {
+		margin: 0px;   
+		min-width: 320px; 
+		}
+		#inner-wrapper {
+		padding: 3% 5%;
+		}
+		h1, h2 {
+			font-size: 180%;
+		}
+		p {
+			font-size: 80%;
+		}
+		header {
+			width: 90%;
+		}
+		/* for slideshow */
+		.nav-arrows a {
+			width: 23px;
+			height: 23px;
+			background-size: cover;
+		}
+		.nav-arrows a:first-child {
+			top: 40%;
+		}
+		.nav-arrows a {
+			top: 40%;
+		}
+		footer a {
+			font-size: 0.6rem;
+		}
+	}
