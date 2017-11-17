@@ -376,7 +376,7 @@ figure:hover .transform02 {
 	background-color: black;
 	background: linear-gradient(-90deg, black, white);
 }
-#contact p {
+#contactform p {
 	text-align: center;
 	line-height: 60%;
 }	
@@ -437,15 +437,12 @@ figure:hover .transform02 {
 	margin: 0 auto;
 	width: 100%;
 	max-width:600px;
-	/* min-width: 750px; */
 	height: auto;
 	height: 100%;
 	min-height:200px;
 	z-index:2;
 	padding:30px;
 	border:1px solid #383838;
-	/* background: #eee; */
-	/* My stripped background */
 	border-radius:8px;
 	box-shadow:0px 1px 6px #3F3F3F;
 	font-size: 110%;
@@ -468,7 +465,8 @@ figure:hover .transform02 {
 	margin-bottom: 5px;
 }
 #contactform  input , #contactform textarea{
-	width: 400px;
+    width: 100%;
+	max-width: 400px;
 	box-sizing: border-box;
 	border: solid 1px #999;
 }
@@ -503,11 +501,8 @@ figure:hover .transform02 {
 * @awards
 */
 #timeline {
-	width: 600px;
-	/*
 	width: 100%;
 	max-width: 600px;
-	*/
 	height: auto;
 	padding: 10px;
 	border:1px solid #383838;
@@ -714,6 +709,31 @@ figure:hover .transform02 {
 		}
 		.nav-arrows a {
 			top: 40%;
+		}
+		/* for homepage */
+		.buttonI {
+		    font-size: 90%;
+		}
+		/* for awards page */
+		#timeline {
+		    width: 95%;
+		}
+		#timeline p {
+		    font-size: 80%;
+		    margin: 0 10px;
+		}
+		#awardsPhoto {
+		    width: 100%;
+		}
+		/* for contact us */
+		#contactform {
+		    width: 80%;
+		}
+		#contactInfo {
+		    width: 80%;
+		}
+		#contact table {
+		    margin: 0;
 		}
 		footer a {
 			font-size: 0.6rem;
